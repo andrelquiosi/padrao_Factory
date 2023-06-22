@@ -1,5 +1,6 @@
 package parkingSystem.parking.billing.factory;
 
+import java.nio.file.Path;
 import java.util.Arrays;
 
 import parkingSystem.parking.billing.BillingType;
@@ -7,24 +8,52 @@ import parkingSystem.parking.billing.strategy.BillCalculator;
 import parkingSystem.parking.billing.strategy.DayBilling;
 import parkingSystem.parking.billing.strategy.HourBilling;
 import parkingSystem.parking.billing.strategy.MonthBilling;
+import parkingSystem.util.Config;
 
 public final class BillCalculatorFactoryImpl implements BillCalculatorFactory {
 
     static BillCalculatorFactory instance = null;
 
-    public BillCalculatorFactory geInstance() {
+    static BillCalculatorFactory getInstance() {
         if (instance == null)
             instance = new BillCalculatorFactoryImpl();
         return instance;
 
     }
 
+    float hourTex;
+    float additionalHourTax;
+    float dayTax;
+    float additionalDayTax;
+    float monthTax;
+
+    private BillCalculatorFactoryImpl() {
+
+        Path path = Path.of(System.getProperty("user.dir"), "billCalculator.cfg");
+
+        Config config = new Config();
+        config.readFromFile(path);
+
+        String strHourTax = config.getPropertyValue("hourTax");
+        hourTex = Float.parseFloat(strHourTax);
+        String strAdditionalHourTax = config.getPropertyValue("additionalHourTax");
+        additionalHourTax = Float.parseFloat(strAdditionalHourTax);
+
+        String strdayTax = config.getPropertyValue("dayTax");
+        dayTax = Float.parseFloat(strdayTax);
+        String strAdditionaldayTax = config.getPropertyValue("additionalDayTax");
+        additionalDayTax = Float.parseFloat(strAdditionaldayTax);
+
+        String strmonthTax = config.getPropertyValue("monthTax");
+        monthTax = Float.parseFloat(strmonthTax);
+
+    }
+
     private BillCalculator createHourBillCalculator() {
 
-        // Acessar o database ou config para buscar os valores
         BillCalculator calculator = new HourBilling();
-        calculator.setBaseTax(10.00f);
-        calculator.setAdditionalTax(5.00f);
+        calculator.setBaseTax(hourTex);
+        calculator.setAdditionalTax(additionalHourTax);
         return calculator;
     }
 
@@ -32,8 +61,8 @@ public final class BillCalculatorFactoryImpl implements BillCalculatorFactory {
 
         // Acessar o database ou config para buscar os valores
         BillCalculator calculator = new DayBilling();
-        calculator.setBaseTax(30.00f);
-        calculator.setAdditionalTax(20.00f);
+        calculator.setBaseTax(dayTax);
+        calculator.setAdditionalTax(additionalDayTax);
         return calculator;
     }
 
@@ -41,7 +70,7 @@ public final class BillCalculatorFactoryImpl implements BillCalculatorFactory {
 
         // Acessar o database ou config para buscar os valores
         BillCalculator calculator = new MonthBilling();
-        calculator.setBaseTax(350.00f);
+        calculator.setBaseTax(monthTax);
         return calculator;
     }
 
