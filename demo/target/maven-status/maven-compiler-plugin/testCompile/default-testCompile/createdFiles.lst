@@ -1,1 +1,2 @@
-com/example/parking/AppTest.class
+parkingSystem/util/ConfigTest.class
+parkingSystem/parking/billing/factory/BillCalculatorFactoryImplTest.class
