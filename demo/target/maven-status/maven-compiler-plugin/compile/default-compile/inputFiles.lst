@@ -1,6 +1,7 @@
 /home/andre/Documents/Dropbox/Disciplinas-TSI/5_semestre/PADRÕES DE PROJETO/Projects/padrao_Factory/demo/src/main/java/parkingSystem/parking/billing/BillingType.java
 /home/andre/Documents/Dropbox/Disciplinas-TSI/5_semestre/PADRÕES DE PROJETO/Projects/padrao_Factory/demo/src/main/java/parkingSystem/util/localDateTime/LocalDateSerializer.java
 /home/andre/Documents/Dropbox/Disciplinas-TSI/5_semestre/PADRÕES DE PROJETO/Projects/padrao_Factory/demo/src/main/java/parkingSystem/parking/billing/factory/BillCalculatorFactory.java
+/home/andre/Documents/Dropbox/Disciplinas-TSI/5_semestre/PADRÕES DE PROJETO/Projects/padrao_Factory/demo/src/main/java/parkingSystem/useCase/ParkingCheckinUseCase.java
 /home/andre/Documents/Dropbox/Disciplinas-TSI/5_semestre/PADRÕES DE PROJETO/Projects/padrao_Factory/demo/src/main/java/parkingSystem/util/localDateTime/LocalDateDeserializer.java
 /home/andre/Documents/Dropbox/Disciplinas-TSI/5_semestre/PADRÕES DE PROJETO/Projects/padrao_Factory/demo/src/main/java/parkingSystem/parking/billing/SimpleBillBuilder.java
 /home/andre/Documents/Dropbox/Disciplinas-TSI/5_semestre/PADRÕES DE PROJETO/Projects/padrao_Factory/demo/src/main/java/parkingSystem/parking/billing/Bill.java
@@ -13,5 +14,8 @@
 /home/andre/Documents/Dropbox/Disciplinas-TSI/5_semestre/PADRÕES DE PROJETO/Projects/padrao_Factory/demo/src/main/java/parkingSystem/parking/billing/strategy/DayBilling.java
 /home/andre/Documents/Dropbox/Disciplinas-TSI/5_semestre/PADRÕES DE PROJETO/Projects/padrao_Factory/demo/src/main/java/parkingSystem/parking/billing/strategy/AbstractBilling.java
 /home/andre/Documents/Dropbox/Disciplinas-TSI/5_semestre/PADRÕES DE PROJETO/Projects/padrao_Factory/demo/src/main/java/parkingSystem/parking/billing/strategy/HourBilling.java
+/home/andre/Documents/Dropbox/Disciplinas-TSI/5_semestre/PADRÕES DE PROJETO/Projects/padrao_Factory/demo/src/main/java/parkingSystem/facade/jsonDto/ParkingCheckingJsonDtoMapper.java
+/home/andre/Documents/Dropbox/Disciplinas-TSI/5_semestre/PADRÕES DE PROJETO/Projects/padrao_Factory/demo/src/main/java/parkingSystem/useCase/ParkingCheckinUseCaseImpl.java
 /home/andre/Documents/Dropbox/Disciplinas-TSI/5_semestre/PADRÕES DE PROJETO/Projects/padrao_Factory/demo/src/main/java/parkingSystem/facade/ParkingFacade.java
+/home/andre/Documents/Dropbox/Disciplinas-TSI/5_semestre/PADRÕES DE PROJETO/Projects/padrao_Factory/demo/src/main/java/parkingSystem/parking/model/ParkingCheckin.java
 /home/andre/Documents/Dropbox/Disciplinas-TSI/5_semestre/PADRÕES DE PROJETO/Projects/padrao_Factory/demo/src/main/java/parkingSystem/parking/billing/strategy/MonthBilling.java
